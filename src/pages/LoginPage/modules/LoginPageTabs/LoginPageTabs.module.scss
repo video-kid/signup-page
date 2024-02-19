@@ -1,0 +1,24 @@
+.tabsWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tab {
+  transition: height 0.5s ease-in;
+  height: 60px;
+  overflow: hidden;
+
+  &.open {
+    height: 100%;
+  }
+}
+
+.tabLabel {
+  height: 60px;
+  padding: 20px;
+  color: #ffffff;
+  background-color: #662549;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}

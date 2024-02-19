@@ -1,0 +1,19 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel {
+  z-index: 1;
+  position: relative;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &[aria-selected='true'] {
+    border-bottom: 1px solid black;
+  }
+}
