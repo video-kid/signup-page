@@ -1,20 +1,34 @@
-import React from 'react';
+import styles from './Form.module.scss';
 
 const SigninForm = () => {
   return (
-    <form>
-      <label for='username'>Login:</label>
-      <input
-        type='text'
-        id='username'
-        name='username'
-      />
-      <label for='email'>Email:</label>
-      <input
-        type='email'
-        id='email'
-        name='email'
-      />
+    <form className={styles.form}>
+      <div className={styles.field}>
+        <label
+          for='username'
+          className={styles.label}>
+          Login:
+        </label>
+        <input
+          className={styles.inputText}
+          type='text'
+          id='username'
+          name='username'
+        />
+      </div>
+      <div className={styles.field}>
+        <label
+          for='email'
+          className={styles.label}>
+          Email:
+        </label>
+        <input
+          className={styles.inputText}
+          type='email'
+          id='email'
+          name='email'
+        />
+      </div>
     </form>
   );
 };
