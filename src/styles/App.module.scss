@@ -1,0 +1,25 @@
+:global(*) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:global(html) {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+:global(html) {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:global(:root) {
+  --white: #ffffff;
+  --black: #000000;
+  --orange: #f39f5a;
+  --maroon: #ae445a;
+  --aubergine: #662549;
+  --violet: #451952;
+  --login-page-tab: 60px;
+}
