@@ -9,31 +9,36 @@ const LoginPageTabs = ({ tabsConfig, selectedTabKey }) => {
     selectedTabKey ?? Object.keys(tabsConfig)[0]
   );
 
-  return currentTab
-    ? Object.keys(tabsConfig).map((tabId, key) => (
-        <>
+  return currentTab ? (
+    <>
+      <div className={styles.tabNav}>
+        {Object.keys(tabsConfig).map((tabId) => (
           <TabButton
-            key={key}
+            key={`button-${tabsConfig[tabId].id}`}
             onClick={() => setTab(tabId)}
             active={currentTab === tabId}
             data-testid={`tab_${tabId}`}
-            label={tabsConfig[tabId].label}
+            label={tabsConfig[tabId].id}
             className={`${styles.tabLabel} ${
               currentTab === tabId ? styles.open : ''
             }`}>
             {tabsConfig[tabId].label}
           </TabButton>
-          <TabPanel
-            label={tabsConfig[tabId].label}
-            content={tabsConfig[tabId].panelContent}
-            ariaHidden={currentTab !== tabId}
-            className={`${styles.tabPanel} ${
-              currentTab === tabId ? styles.open : ''
-            }`}
-          />
-        </>
-      ))
-    : null;
+        ))}
+      </div>
+      {Object.keys(tabsConfig).map((tabId) => (
+        <TabPanel
+          key={`panel-${tabsConfig[tabId].id}`}
+          label={tabsConfig[tabId].id}
+          content={tabsConfig[tabId].panelContent}
+          ariaHidden={currentTab !== tabId}
+          className={`${styles.tabPanel} ${
+            currentTab === tabId ? styles.open : ''
+          }`}
+        />
+      ))}
+    </>
+  ) : null;
 };
 
 export { LoginPageTabs };
