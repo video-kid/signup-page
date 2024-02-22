@@ -22,7 +22,7 @@ const SigninForm = () => {
       <button
         type='submit'
         className={buttonStyles.button}>
-        Sign in
+        Sign up
       </button>
     </form>
   );
