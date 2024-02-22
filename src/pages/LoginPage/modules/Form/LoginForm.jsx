@@ -1,37 +1,30 @@
+import Input from '../../../../components/Form/Input';
 import styles from './Form.module.scss';
+import buttonStyles from './Button.module.scss';
 
 const LoginForm = () => {
   return (
-    <div>
-      <form className={styles.form}>
-        <div className={styles.field}>
-          <label
-            for='username'
-            className={styles.label}>
-            Login:
-          </label>
-          <input
-            className={styles.inputText}
-            type='text'
-            id='username'
-            name='username'
-          />
-        </div>
-        <div className={styles.field}>
-          <label
-            for='password'
-            className={styles.label}>
-            Password:
-          </label>
-          <input
-            className={styles.inputText}
-            type='password'
-            id='password'
-            name='password'
-          />
-        </div>
-      </form>
-    </div>
+    <form className={styles.form}>
+      <section>
+        <Input
+          label='Login'
+          type='text'
+          id='username'
+          name='username'
+        />
+        <Input
+          label='Password'
+          type='password'
+          id='password'
+          name='password'
+        />
+      </section>
+      <button
+        type='submit'
+        className={buttonStyles.button}>
+        Log in
+      </button>
+    </form>
   );
 };
 
