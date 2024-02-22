@@ -8,8 +8,8 @@ import { LoginPageTabs } from './modules/LoginPageTabs/LoginPageTabs';
 const LoginPage = () => {
   const tabsObj = {
     tab1: {
-      id: 'signin',
-      label: 'Sign In',
+      id: 'signup',
+      label: 'Sign Up',
       panelContent: <SigninForm />,
     },
     tab2: {
